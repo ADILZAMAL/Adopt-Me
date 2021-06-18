@@ -24,7 +24,7 @@ const useBreedList = (animal) => {
       setBreedList(localCache[animal]);
       setStatus("loaded");
     }
-  }, [animal]);
+  }, [animal]); //eslint-disable-line
 
   return [breedList, status];
 };
