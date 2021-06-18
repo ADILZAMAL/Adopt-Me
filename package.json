@@ -5,14 +5,21 @@
   "main": "index.js",
   "scripts": {
     "format": "prettier --write \"src/**/*.{js, jsx}\"",
-    "lint": "eslint \"src/**/*.{js, jsx}\" --quiet"
+    "lint": "eslint \"src/**/*.{js, jsx}\" --quiet",
+    "dev": "parcel src/index.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-react": "^7.14.5",
     "eslint": "^7.28.0",
     "eslint-config-prettier": "^8.3.0",
+    "parcel": "^2.0.0-beta.2",
     "prettier": "^2.3.1"
-  }
+  },
+  "browserslist": [
+    "last 2 chrome versions"
+  ]
 }
