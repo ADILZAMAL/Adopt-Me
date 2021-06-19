@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { withRouter } from "react-router-dom";
 import Carousel from "./Carousel";
+import ErrorBoundaries from "./ErrorBoundaries";
 
 class Details extends Component {
   constructor() {
@@ -36,4 +37,12 @@ class Details extends Component {
   }
 }
 
-export default withRouter(Details);
+const DetailsWithRouter = withRouter(Details);
+
+export default function DetailsWithErrorBoundaries(props) {
+  return (
+    <ErrorBoundaries>
+      <DetailsWithRouter {...props} />
+    </ErrorBoundaries>
+  );
+}
